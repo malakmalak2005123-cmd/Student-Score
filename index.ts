@@ -15,3 +15,6 @@ function getAverageScore(students: Student[]): number {
   const total = students.reduce((sum, student) => sum + student.score, 0);
   return total / students.length;
 }
+ function getActive(student: Student[]): Student[] {
+    return student.filter(student=>student.isActive)
+ }
