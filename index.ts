@@ -10,11 +10,21 @@ const students: Student[] = [
   { id: 3, name: "Yassine", score: 10, isActive: false }
 ];
 
-
+//derna : number 7itach en return number
 function getAverageScore(students: Student[]): number {
   const total = students.reduce((sum, student) => sum + student.score, 0);
   return total / students.length;
 }
+//derna : student[] 7itach en return array dyal student[]
  function getActive(student: Student[]): Student[] {
     return student.filter(student=>student.isActive)
+ }
+ 
+// إذا النقطة ديال الطالب الحالي أكبر من top → نبدلو top بالطالب الحالي
+// إذا لا → نخليو top كما هو
+ function getTopStudent(students: Student[]): Student | null {
+    if(students.length===0)return null;
+    return students.reduce((top, student) =>
+    student.score > top.score ? student : top
+    );
  }
