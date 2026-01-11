@@ -19,7 +19,7 @@ function getAverageScore(students: Student[]): number {
  function getActive(student: Student[]): Student[] {
     return student.filter(student=>student.isActive)
  }
- 
+
 // إذا النقطة ديال الطالب الحالي أكبر من top → نبدلو top بالطالب الحالي
 // إذا لا → نخليو top كما هو
  function getTopStudent(students: Student[]): Student | null {
@@ -28,3 +28,14 @@ function getAverageScore(students: Student[]): number {
     student.score > top.score ? student : top
     );
  }
+
+   function addStudent(students: Student[], newStudent: Student): Student[] {
+  const exists = students.some(student => student.id === newStudent.id);
+
+  if (exists) {
+   
+    return students;
+  }
+
+ 
+  return [...students, newStudent]; }
