@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Academy - Student Score Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="logo.png" alt="Future Academy Logo">
+    <h1>Future Academy</h1>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar / Stats Dashboard -->
+    <aside class="dashboard">
+      <h2>Class Statistics</h2>
+      <div class="stat-item">
+        <p id="average">Loading...</p>
+      </div>
+      <div class="stat-item">
+        <p id="active">Loading...</p>
+      </div>
+      <div class="stat-item">
+        <p id="top">Loading...</p>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+
+      <section class="add-student-form">
+        <h2>Add New Student</h2>
+
+        <div class="form-group">
+          <input type="number" id="newId" placeholder="ID Number">
+          <input type="text" id="newName" placeholder="Student Name">
+          <input type="number" id="newScore" placeholder="Score (0-20)">
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="newActive" checked>
+            Active Student
+          </label>
+        </div>
+
+        <button id="addBtn">Add to Record</button>
+      </section>
+
+      <section class="student-list-container">
+        <h2>Student Records</h2>
+        <ul id="studentList" class="student-list">
+          <!-- List items will be populated by JS -->
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2026 Future Academy. Student Management System.
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
